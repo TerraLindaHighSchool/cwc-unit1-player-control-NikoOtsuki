@@ -9,12 +9,13 @@ public class DetectCollisions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        // If an object goes past the players view in the game, destroy it
         if (transform.position.z > topBound)
         {
             Destroy(gameObject);
@@ -22,7 +23,7 @@ public class DetectCollisions : MonoBehaviour
         else if (transform.position.z < lowerBound)
         {
             Debug.Log("Game Over!");
-            Destory(gameObject);
+            Destroy(gameObject);
         }
     }
 }
